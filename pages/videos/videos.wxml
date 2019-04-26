@@ -1,0 +1,31 @@
+<!--pages/videos/videos.wxml--><!--pages/videos/videos.wxml-->
+<!--标题，内容，作者-->
+<!--标题，作者-->
+  <view class="page-vtext">
+    <text class="author-name">周懿芳</text>
+    <text class="author-introduce">up主</text>
+  </view>
+  <!--视频界面：调用url，功能自带-->
+  <view class="video-area">
+    <view class="video-func">
+      <video src='http://flv.bn.netease.com/videolib3/1605/22/auDfZ8781/HD/auDfZ8781-mobile.mp4' binderror='callbackerror'bindended='reachtoend'switchtonext='videoplay'>
+      </video>
+      <!--使用videoplay方式对于索引的视频进行连续播放，触发器是视频结束bindended-->
+      <view class="jump-botton">
+        <button bindtap="gonextpage" >下一章节</button>
+      </view>
+    </view>
+  </view>
+  <view class="related">
+    <view class='card-info'>
+      <view class='down-center1' style='height:50%;border-bottom:1px solid #E3E3E3;'>
+        <i class="iconfont icon-list" style="color:#FF9C35"></i>
+        <label style='font-size:15px;margin-left:15px'>第三章：质数</label>
+      </view>
+      <view class='down-center2' style='height:50%;border-bottom:1px solid #E3E3E3;'>
+        <i class="iconfont icon-list" style="color:#FF9C35"></i>
+        <label style='font-size:15px;margin-left:15px'>第三章：最大公约数</label>
+      </view>
+  </view>
+</view>
+<!--gonextpage,callbackerror,-->

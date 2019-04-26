@@ -1,0 +1,83 @@
+<!--pages/order/lists/list.wxml-->
+<!--pages/test/detail/detail.wxml-->
+
+<form bindsubmit="formSubmit">
+  <view class='section item-block'>
+    <view class='choose-item-title' style='text-align: left;font-size=20px;'>不是2的倍数的数一定是
+    </view>
+    <radio-group class="radio-group" name="choose-radio-group" bindchange="radioChange">
+      <label class="radio">
+        <radio value="{{item.name}}" /> A: 质数
+      </label>
+      <label class="radio">
+        <radio value="{{item.name}}" /> B: 合数
+      </label>
+      <label class="radio">
+        <radio value="{{item.name}}" /> C: 奇数
+      </label>
+      <label class="radio">
+        <radio value="{{item.name}}" /> D: 偶数
+      </label>
+    </radio-group>
+  </view>
+
+  <view class='section item-block2'>
+    <button formType="submit" class='btn-commit'>提交</button>
+    <button formType="submit" class='btn-commit'>提示</button>
+    <button formType="submit" class='btn-commit'>跳过</button>
+  </view>
+</form>
+
+<view class="youhui">
+  <view class="{{_num==0?'active':''}}" data-index='0' bindtap='toggle'>
+    习题详解
+  </view>
+  <view class="{{_num==1?'active':''}}" data-index='1' bindtap='toggle'>
+    涉及知识点
+  </view>
+</view>
+
+
+
+
+<swiper current="{{_num}}" class="swiper-box" duration="200" bindchange="bindChange" style='min-height:645rpx'>
+  <swiper-item>
+    <button bindtap='play'>
+      <video id='myvideo' class="{{fullScreen?show:hide}}" src='http://flv.bn.netease.com/videolib3/1605/22/auDfZ8781/HD/auDfZ8781-mobile.mp4' autoplay='false' bindended='true' bindfullscreenchange='fullscreen'>
+      </video>
+    </button>
+  </swiper-item>
+
+  <swiper-item>
+    <view class="widgets__item">
+      <view id="view" class="widgets__info {{viewShow ? 'widgets__info_show' : ''}}" bindtap="gocourse">
+        <text class="widgets__info-name">质数合数</text>
+        <view class='btn-bar'>
+          <view class='btn-block' bindtap='golist'>
+            <view class="btn_op2">详情</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="widgets__item">
+      <view id="view" class="widgets__info {{viewShow ? 'widgets__info_show' : ''}}" bindtap="gocourse">
+        <text class="widgets__info-name">判断质数</text>
+        <view class='btn-bar'>
+          <view class='btn-block' bindtap='golist'>
+            <view class="btn_op2">详情</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="widgets__item">
+      <view id="view" class="widgets__info {{viewShow ? 'widgets__info_show' : ''}}" bindtap="gocourse">
+        <text class="widgets__info-name">质因子分解</text>
+        <view class='btn-bar'>
+          <view class='btn-block' bindtap='golist'>
+            <view class="btn_op2">详情</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>

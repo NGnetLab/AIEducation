@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/list/list",
+    "pages/order/balance/balance",
+    "pages/mine/mine",
+    "pages/videos/videos",
+    "pages/order/lists/list",
+    "pages/order/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#009FCC",
+    "navigationBarTitleText": "小鹰教程",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#FF9C35",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "images/home_s.png",
+        "iconPath": "images/home.png",
+        "pagePath": "pages/index/index",
+        "text": "学习"
+      },
+      {
+        "selectedIconPath": "images/order_s.png",
+        "iconPath": "images/order.png",
+        "pagePath": "pages/order/lists/list",
+        "text": "发现"
+      },
+      {
+        "selectedIconPath": "images/mine_s.png",
+        "iconPath": "images/mine.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

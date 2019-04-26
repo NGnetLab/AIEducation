@@ -1,0 +1,29 @@
+<view>
+<!-- 左侧菜单 -->
+  <view class="list-left-menu">
+    <view wx:for="{{listData}}" wx:key="unique" class="{{index==activeIndex?'list-left-menu-box-selected':'list-left-menu-box-unselect'}}" data-index="{{index}}" bindtap='selectMenu'>
+      <view class="list-menu-name"></view>
+    </view>
+  </view>
+  <!-- 右侧菜单 关键点：scroll-into-view=>toview-->
+  载入中<scroll-view scroll></scroll-view>
+
+  <scroll-view scroll-y="true" style='height:1200rpx;'scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <view class="content" id="a{{index}}" wx:for="{{listData}}" wx:key="unique">
+      <view class='list-tab'>{{}}</view>
+      <view class='content-list' wx:for="{{'px'}}" wx:key="unique" wx:for-item="items" wx:for-index="indexs">
+        <view class='list-image-box'>
+          <image class="list-image" mode="widthFix" src='{{}}'></image>
+        </view>
+        <view class='issue-name'>
+          <view>{{items.name}}</view>
+          <view style='margin-top:20rpx;color:#F05A86'>
+            小学 {{items.specfoods[0].price}}.年级科目
+            <i class="iconfont icon-jiahao2fill plus-icon" data-type="{{index}}" data-index="{{indexs}}" bindtap="selectInfo"></i>
+          </view>
+
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
