@@ -3,15 +3,15 @@
 const app = getApp()
 
 Page({
-  gocourse: function () {
-    wx.navigateTo({
-      url: '../videos/videos'
-    })
-  },
-  onLoad: function () {
-  }
+  //gocourse: function () {
+  //  wx.navigateTo({
+  //    url: '../videos/videos'
+  //  })
+  //},
+  //onLoad: function () {
+  //}
 })
-var pageData = {},
+/*var pageData = {},
   type = [
     'view', 'content', 'form', 'interact', 'nav', 'media', 'map', 'canvas'
   ];
@@ -34,7 +34,7 @@ pageData.widgetsToggle = function (e) {
     interval: 5000,
     duration: 1000
   },*/
-var pageData = {},
+/*var pageData = {},
   type = [
     'content'
   ];
@@ -48,4 +48,4 @@ pageData.widgetsToggle = function (e) {
   this.setData(data);
 };
 
-Page(pageData);
+Page(pageData);*/

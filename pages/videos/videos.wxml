@@ -8,7 +8,7 @@
   <!--视频界面：调用url，功能自带-->
   <view class="video-area">
     <view class="video-func">
-      <video src='http://flv.bn.netease.com/videolib3/1605/22/auDfZ8781/HD/auDfZ8781-mobile.mp4' binderror='callbackerror'bindended='reachtoend'switchtonext='videoplay'>
+      <video src= "{{Url}}"binderror='callbackerror'bindended='reachtoend'switchtonext='videoplay'>
       </video>
       <!--使用videoplay方式对于索引的视频进行连续播放，触发器是视频结束bindended-->
       <view class="jump-botton">
